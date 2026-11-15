@@ -1,0 +1,15 @@
+<h1>Description du {{pc.model}}</h1>
+<img [src]="pc.image" alt="">
+<ul>
+    <li>Marque {{pc.brand}}</li>
+    <li>Gamme :
+        <input type="radio" [checked]="pc.price < 2000" disabled> Bas de Gamme <input [checked]="pc.price >= 2000" type="radio" disabled> Haut de Gamme
+    </li>
+    <li>Prix (DT):
+        <input type="text" [(ngModel)]="pc.price">
+    </li>
+    <li>Disponibilte :
+        <input type="checkbox" disabled [checked]="pc.availability"> <label [hidden]="!pc.availability">disponible</label>
+    </li>
+</ul>
+<button (click)="onAfficher()">Caracteristiques</button>

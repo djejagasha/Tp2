@@ -1,0 +1,23 @@
+<h1>Chaine Youtube pour les developeeurs</h1>
+<div>
+    <img [src]="channels[0].picture" width="50" height="50"> <strong>Nom:</strong> {{channels[0].name}}
+    <strong>Origins</strong> <input type="checkbox" [checked]="channels[0].country == 'Tunisia'" disabled> TN
+    <a [href]="channels[0].link">{{channels[0].link}}</a>
+    <strong>Nombre d'abonne :</strong> {{channels[0].nbSubscribers}}
+    <button #button1 (click)="onAbonner(0,button1)">s'abonner</button>
+</div>
+<div>
+    <img [src]="channels[1].picture" width="50" height="50"> <strong>Nom:</strong> {{channels[1].name}}
+    <strong>Origins</strong> <input type="checkbox" [checked]="channels[1].country == 'Tunisia'" disabled> TN
+    <a [href]="channels[1].link">{{channels[1].link}}</a>
+    <strong>Nombre d'abonne :</strong> {{channels[1].nbSubscribers}}
+    <button #button2 (click)="onAbonner(1,button2)">s'abonner</button>
+</div>
+<div>
+    <img [src]="channels[2].picture" width="50" height="50"> <strong>Nom:</strong> {{channels[2].name}}
+    <strong>Origins</strong> <input type="checkbox" [checked]="channels[2].country == 'Tunisia'" disabled> TN
+    <a [href]="channels[2].link">{{channels[2].link}}</a>
+    <strong>Nombre d'abonne :</strong> {{channels[2].nbSubscribers}}
+    <button #button3 (click)="onAbonner(2,button3)">s'abonner</button>
+</div>
+Donner le nombre d'abonnes minimal <input type="number" #number> <button (click)="onAfficherNbrChaine(number.value)">Nombre de chaine</button>
